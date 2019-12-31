@@ -16,17 +16,17 @@ public class App {
 	}
 	
 	public static int removeDuplicates(int[] nums) {
-        Set<Integer> set = new HashSet<>();
-        int index = 0;
-        for(int i : nums){
-           if(!set.contains(i)){
+          Set<Integer> set = new HashSet<>();
+          int index = 0;
+          for(int i : nums){
+            if(!set.contains(i)){
                 set.add(i);
-	            nums[index] = i;
-	            index++; 	
-           } 
-        }
-        return index;
-    }
+	        nums[index] = i;
+	        index++; 	
+             } 
+          }
+         return index;
+       }
 
 }
 ```
@@ -51,17 +51,17 @@ public class App {
 	}
 	
 	public static int removeDuplicates(int[] nums) {
-        int index = 0;
-        int last_seen = Integer.MIN_VALUE;
-        for(int i : nums){
-            if(i > last_seen){
-                nums[index] = i;
-                index++; 
-            }
-            last_seen = i;
-        }
-        return index;
-    }
+	   int index = 0;
+	   int last_seen = Integer.MIN_VALUE;
+	   for(int i : nums){
+		if(i > last_seen){
+		    nums[index] = i;
+		    index++; 
+		 }
+		last_seen = i;
+	   }
+         return index;
+       }
 }
 ```
 The above implementation have Runtime complexity of O(n) and space complexity of O(1)
