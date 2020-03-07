@@ -74,16 +74,12 @@ public class App {
 	}
 	
 	public static int removeDuplicates(int[] nums) {
-	   int index = 0;
-	   int last_seen = Integer.MIN_VALUE;
-	   for(int i : nums){
-		if(i > last_seen){
-		    nums[index] = i;
-		    index++; 
-		 }
-		last_seen = i;
+	   int index = 1;
+	   for(int i = 1; i < nums.length; i++){
+		if(nums[i] != nums[i-1])
+		   nums[index++] = nums[i];
 	   }
-         return index;
+           return index;  
        }
 }
 ```
