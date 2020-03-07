@@ -44,8 +44,7 @@ public class App {
           for(int i : nums){
             if(!set.contains(i)){
                 set.add(i);
-	        nums[index] = i;
-	        index++; 	
+	        nums[index++] = i;	
              } 
           }
          return index;
